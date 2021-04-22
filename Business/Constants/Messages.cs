@@ -47,6 +47,9 @@ namespace Business.Constants
         public static string TcCardListed = "TcCard listed";
         public static string TcCardUpdated = "TcCard updated";
         public static string TcCardAdded = "TcCard added";
+        public static string PhoneAlreadyExists= "Lütfen muhatabın Ad, Soyad ve en az bir iletişim bilgisini giriniz.";
+        public static string PhoneNumberAlreadyExist= "Girmek istediğiniz Telefon numarası ile uyuşan muhatap kaydı bulunmaktadır, lütfen bilgileri kontrol ediniz.";
+        public static string TcAlreadyExists= "Girmek istediğiniz TCKN ile uyuşan muhatap kaydı bulunmaktadır, lütfen bilgileri kontrol ediniz.";
     }
     
 }

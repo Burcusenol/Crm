@@ -24,5 +24,8 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Reference> References { get; set; }
         public DbSet<Relation> Relations { get; set; }
         public DbSet<TcCard> TcCards { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<District> Districts { get; set; }
     }
 }

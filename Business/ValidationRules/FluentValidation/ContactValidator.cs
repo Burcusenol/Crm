@@ -10,7 +10,7 @@ namespace Business.ValidationRules.FluentValidation
     {
         public ContactValidator()
         {
-            RuleFor(c => c.MobilePhone).NotEmpty();
+            RuleFor(c => c.MobilePhone).NotEmpty().WithMessage("Lütfen muhatabın Ad, Soyad ve en az bir iletişim bilgisini giriniz.");
         }
     }
 }

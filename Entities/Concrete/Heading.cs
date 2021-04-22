@@ -7,7 +7,7 @@ namespace Entities.Concrete
 {
     public class Heading:Identity,IEntity
     {
-        public int Id { get; set; }
+        public int HeadingId { get; set; }
         public int IdentityId { get; set; }
         public int ContactId { get; set; }
         public string Department { get; set; }

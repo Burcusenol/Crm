@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -18,6 +20,7 @@ namespace Business.Concrete
             _addressDal = addressDal;
         }
 
+        [ValidationAspect(typeof(AddressValidator))]
         public IResult Insert(Address address)
         {
             _addressDal.Insert(address);

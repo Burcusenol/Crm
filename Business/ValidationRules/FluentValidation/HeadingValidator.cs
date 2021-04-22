@@ -10,8 +10,8 @@ namespace Business.ValidationRules.FluentValidation
     {
         public HeadingValidator()
         {
-            RuleFor(h => h.Name).NotEmpty();
-            RuleFor(h => h.SurName).NotEmpty();
+            RuleFor(h => h.Name).NotEmpty().WithMessage("Lütfen muhatabın Ad, Soyad ve en az bir iletişim bilgisini giriniz.");
+            RuleFor(h => h.SurName).NotEmpty().WithMessage("Lütfen muhatabın Ad, Soyad ve en az bir iletişim bilgisini giriniz.");
             RuleFor(h => h.Identification).NotEmpty();
             RuleFor(h => h.BirthDate).NotEmpty();
                        

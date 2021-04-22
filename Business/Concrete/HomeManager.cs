@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -23,6 +25,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Home>>(_homeDal.GetAll(), Messages.HomeListed);
         }
 
+        [ValidationAspect(typeof(HomeValidator))]
         public IResult Insert(Home home)
         {
             _homeDal.Insert(home);
