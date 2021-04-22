@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Entities.Concrete
 {
-    public class Heading:IEntity
+    public class Heading:Identity,IEntity
     {
         public int Id { get; set; }
         public int IdentityId { get; set; }
