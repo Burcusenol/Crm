@@ -17,10 +17,10 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var result = from h in context.Headings
                              join ı in context.Identities
-                             on h.IdentityId equals ı.Id
+                             on h.IdentityId equals ı.IdentityId
                              select new HeadingDetailDto
                              {
-                                 Id = h.Id,
+                                 
                                  Department = h.Department,
                                  FatherName = ı.FatherName,
                                  MotherName = ı.MotherName,
@@ -35,7 +35,7 @@ namespace DataAccess.Concrete.EntityFramework
                                  SecondName = h.SecondName,
                                  SurName = h.SurName,
                                  Nationality = ı.Nationality,
-                                 NationalStatus = ı.NationalStatus,
+                                 NationalityStatus=ı.NationalityStatus,
                                  Place = ı.Place,
 
 

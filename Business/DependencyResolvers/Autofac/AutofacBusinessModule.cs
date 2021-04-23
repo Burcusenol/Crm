@@ -29,7 +29,7 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<HeadingManager>().As<IHeadingService>();
             builder.RegisterType<EfHeadingDal>().As<IHeadingDal>();
 
-            builder.RegisterType<HomeManager>().As<IHomeDal>();
+            builder.RegisterType<HomeManager>().As<IHomeService>();
             builder.RegisterType<EfHomeDal>().As<IHomeDal>();
 
             builder.RegisterType<JobManager>().As<IJobService>();

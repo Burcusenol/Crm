@@ -14,7 +14,7 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(ı => ı.FatherName).NotEmpty();
             RuleFor(ı => ı.MotherName).NotEmpty();
             RuleFor(ı => ı.Nationality).NotEmpty();
-            RuleFor(ı => ı.NationalStatus).NotEmpty();
+            RuleFor(ı => ı.NationalityStatus).NotEmpty();
             RuleFor(ı => ı.Place).NotEmpty();
             
         }

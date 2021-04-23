@@ -17,13 +17,13 @@ namespace Business.Concrete
     public class HeadingManager : IHeadingService
     {
         IHeadingDal _headingDal;
-        IContactService _contactService;
+        
        
 
         public HeadingManager(IHeadingDal headingDal,IContactService contactService)
         {
             _headingDal = headingDal;
-            _contactService = contactService;
+            
             
         }
 

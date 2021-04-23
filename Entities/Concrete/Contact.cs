@@ -7,7 +7,7 @@ namespace Entities.Concrete
 {
     public class Contact:IEntity
     {
-        public int Id { get; set; }
+        public int ContactId { get; set; }
         public string MobilePhone { get; set; }
         public string HomePhone { get; set; }
         public string OfficePhone { get; set; }
