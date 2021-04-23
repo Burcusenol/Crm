@@ -1,4 +1,6 @@
-﻿using Entities.Concrete;
+﻿using Business.Constants;
+using Core.Utilities.Results;
+using Entities.Concrete;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -6,7 +8,7 @@ using System.Text;
 
 namespace Business.ValidationRules.FluentValidation
 {
-    public class HeadingValidator:AbstractValidator<Heading>
+    public class HeadingValidator : AbstractValidator<Heading>
     {
         public HeadingValidator()
         {
@@ -14,7 +16,13 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(h => h.SurName).NotEmpty().WithMessage("Lütfen muhatabın Ad, Soyad ve en az bir iletişim bilgisini giriniz.");
             RuleFor(h => h.Identification).NotEmpty();
             RuleFor(h => h.BirthDate).NotEmpty();
-                       
+
+
+
         }
+
+
     }
 }
+
+

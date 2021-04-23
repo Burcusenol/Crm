@@ -17,11 +17,13 @@ namespace Business.Concrete
     public class HeadingManager : IHeadingService
     {
         IHeadingDal _headingDal;
+        IContactService _contactService;
        
 
         public HeadingManager(IHeadingDal headingDal,IContactService contactService)
         {
             _headingDal = headingDal;
+            _contactService = contactService;
             
         }
 
@@ -38,7 +40,7 @@ namespace Business.Concrete
         [ValidationAspect(typeof(HeadingValidator))]
         public IResult Insert(Heading heading)
         {
-            IResult result = BusinessRules.Run(CheckIfTcAlreadyExists(heading.Identification));
+            IResult result = BusinessRules.Run(CheckIfTcAlreadyExists(heading.Identification),CheckIfNull());
 
             if(result!=null)
             {
@@ -61,6 +63,16 @@ namespace Business.Concrete
             if(result)
             {
                 return new ErrorResult(Messages.TcAlreadyExists);
+            }
+            return new SuccessResult();
+        }
+
+       private IResult CheckIfNull()
+        {
+            var result = _headingDal.GetAll(h => h.Name == "" || h.SurName == "").Any();
+            if(result)
+            {
+                return new ErrorResult(Messages.ChechkIfNull);
             }
             return new SuccessResult();
         }

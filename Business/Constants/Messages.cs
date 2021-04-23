@@ -50,6 +50,7 @@ namespace Business.Constants
         public static string PhoneAlreadyExists= "Lütfen muhatabın Ad, Soyad ve en az bir iletişim bilgisini giriniz.";
         public static string PhoneNumberAlreadyExist= "Girmek istediğiniz Telefon numarası ile uyuşan muhatap kaydı bulunmaktadır, lütfen bilgileri kontrol ediniz.";
         public static string TcAlreadyExists= "Girmek istediğiniz TCKN ile uyuşan muhatap kaydı bulunmaktadır, lütfen bilgileri kontrol ediniz.";
+        public static string ChechkIfNull = "Lütfen muhatabın Ad, Soyad ve en az bir iletişim bilgisini giriniz.";
     }
     
 }

@@ -32,7 +32,7 @@ namespace Business.Concrete
         public IResult Insert(Contact contact)
         {
 
-            IResult result = BusinessRules.Run(CheckIfPhoneNumberExists(contact.MobilePhone));
+            IResult result = BusinessRules.Run(CheckIfPhoneNumberExists(contact.MobilePhone),CheckIfNull());
                
             if(result!=null)
             {
@@ -54,6 +54,16 @@ namespace Business.Concrete
             if(result)
             {
                 return new ErrorResult(Messages.PhoneNumberAlreadyExist);
+            }
+            return new SuccessResult();
+        }
+
+        private IResult CheckIfNull()
+        {
+            var result = _contactDal.GetAll(c=>c.MobilePhone==""||c.OfficePhone==""||c.HomePhone=="").Any();
+            if (result)
+            {
+                return new ErrorResult(Messages.ChechkIfNull);
             }
             return new SuccessResult();
         }
