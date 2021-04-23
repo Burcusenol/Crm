@@ -10,7 +10,7 @@ namespace Entities.Concrete
         public int PersonCount { get; set; }
         public int Year { get; set; }
         public int HomeKidCount { get; set; }
-        public int HomeStatus { get; set; }
+        public string HomeStatus { get; set; }
 
     }
 }

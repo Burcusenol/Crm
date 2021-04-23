@@ -35,6 +35,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<JobManager>().As<IJobService>();
             builder.RegisterType<EfJobDal>().As<IJobDal>();
 
+            builder.RegisterType<IdentityManager>().As<IIdentityService>();
+            builder.RegisterType<EfIdentityDal>().As<IIdentityDal>();
+
             builder.RegisterType<ReferenceManager>().As<IReferenceService>();
             builder.RegisterType<EfReferenceDal>().As<IReferenceDal>();
 
