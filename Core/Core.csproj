@@ -9,9 +9,7 @@
     <Folder Include="Aspects\Transaction\" />
     <Folder Include="Aspects\Performance\" />
     <Folder Include="CrossCuttingConcerns\Caching\" />
-    <Folder Include="DependencyResolvers\" />
     <Folder Include="Entities\Concrete\" />
-    <Folder Include="Extensions\" />
     <Folder Include="Utilities\Security\" />
   </ItemGroup>
 
