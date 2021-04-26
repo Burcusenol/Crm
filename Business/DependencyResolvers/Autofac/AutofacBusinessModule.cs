@@ -47,6 +47,8 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<TcCardManager>().As<ITcCardService>();
             builder.RegisterType<EfTcCardDal>().As<ITcCardDal>();
 
+            builder.RegisterType<PersonUpdateManager>().As<IPersonUpdateService>();
+            builder.RegisterType<EfPersonUpdateDal>().As<IPersonUpdateDal>();
 
 
 
