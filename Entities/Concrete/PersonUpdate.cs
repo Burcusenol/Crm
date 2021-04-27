@@ -8,7 +8,6 @@ namespace Entities.Concrete
     public class PersonUpdate:IEntity
     {
         public int Id { get; set; }
-        public int PersonNumber { get; set; }
         public string PersonType { get; set; }
         public string KVKStatus { get; set; }
         public string PersonName { get; set; }
