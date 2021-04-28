@@ -28,5 +28,7 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Country> Countries { get; set; }
         public DbSet<District> Districts { get; set; }
         public DbSet<PersonUpdate> PersonUpdates { get; set; }
+        public DbSet<ContactUpdate> ContactUpdates { get; set; }
+        public DbSet<JobType> JobTypes { get; set; } 
     }
 }

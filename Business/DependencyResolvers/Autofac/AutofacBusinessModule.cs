@@ -50,6 +50,8 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<PersonUpdateManager>().As<IPersonUpdateService>();
             builder.RegisterType<EfPersonUpdateDal>().As<IPersonUpdateDal>();
 
+            builder.RegisterType<JobTypeManager>().As<IJobTypeService>();
+            builder.RegisterType<EfJobTypeDal>().As<IJobTypeDal>();
 
 
             builder.RegisterType<HttpContextAccessor>().As<IHttpContextAccessor>();
