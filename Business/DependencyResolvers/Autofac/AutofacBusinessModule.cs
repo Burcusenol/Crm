@@ -53,6 +53,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<JobTypeManager>().As<IJobTypeService>();
             builder.RegisterType<EfJobTypeDal>().As<IJobTypeDal>();
 
+            builder.RegisterType<ContactUpdateManager>().As<IContactUpdateService>();
+            builder.RegisterType<EfContactUpdateDal>().As<IContactUpdateDal>();
+
 
             builder.RegisterType<HttpContextAccessor>().As<IHttpContextAccessor>();
 
