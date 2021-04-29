@@ -5,12 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Aspects\Caching\" />
-    <Folder Include="Aspects\Transaction\" />
-    <Folder Include="Aspects\Performance\" />
-    <Folder Include="CrossCuttingConcerns\Caching\" />
     <Folder Include="Entities\Concrete\" />
-    <Folder Include="Utilities\Security\" />
   </ItemGroup>
 
   <ItemGroup>
